@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class NextButton : MonoBehaviour
 {
-    public void Click()
+    public void Click(string sceneName)
     { 
-        GameManager.Instance.PlayVideo();
+        GameManager.Instance.PlayVideo(sceneName);
     }
 }

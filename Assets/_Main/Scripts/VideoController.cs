@@ -7,6 +7,7 @@ namespace RanchiMusuem
     public class VideoController : MonoBehaviour
     {
         [SerializeField] private Material videoMat;
+        [SerializeField] private string videoName;
         private VideoPlayer videoPlayer;
 
         private void Awake()
@@ -23,7 +24,7 @@ namespace RanchiMusuem
 
         private void Start()
         {
-            videoPlayer.url = Path.Combine(Application.streamingAssetsPath, "Video.mp4");
+            videoPlayer.url = Path.Combine(Application.streamingAssetsPath, videoName + ".mp4");
             videoMat.color = Color.black;
             //videoPlayer.Play();
         }

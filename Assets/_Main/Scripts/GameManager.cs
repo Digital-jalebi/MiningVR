@@ -10,7 +10,6 @@ namespace RanchiMusuem
 
         [SerializeField] private SceneSwitcher sceneSwitcher;
         [SerializeField] private string mainMenuSceneName;
-        [SerializeField] private string videoSceneName;
 
         private void Awake()
         {
@@ -25,13 +24,7 @@ namespace RanchiMusuem
             }
         }
 
-        [ContextMenu("Test")]
-        public void PlayTest()
-        {
-            PlayVideo();
-        }
-
-        public void PlayVideo()
+        public void PlayVideo(string videoSceneName)
         {
             sceneSwitcher.SwitchScene(videoSceneName);
         }
